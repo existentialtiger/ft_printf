@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   flag_handling.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edehmlow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/11 19:21:50 by edehmlow          #+#    #+#             */
-/*   Updated: 2018/09/11 21:29:37 by edehmlow         ###   ########.fr       */
+/*   Created: 2018/09/11 21:50:19 by edehmlow          #+#    #+#             */
+/*   Updated: 2018/09/11 21:58:02 by edehmlow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../inclds/ft_printf.h"
 
-void	percent_seen()
+t_info	*flag_management(struct s_info *info)
 {
-		
+	if (info.flags.plus && info.flags,space)
+		info.flags.space = 0;
+	if (info.flags.
 }
 
-t_info	flag_flip(char *str, int i)
+t_info	*flag_flip(char *str, int i)
 {
 	struct s_info	info;
 
 	while (!chk_fot_char(TYPE, str[i]))
 	{
-		if (str[i] == '#') 
+		if (str[i] == '#')
 			info.flags.pound = 1;
 		else if (str[i] == '0')
 			info.flags.zero = 1;
@@ -46,47 +48,5 @@ t_info	flag_flip(char *str, int i)
 		}
 		i++;
 	}
-
-	
-}
-
-
-int		ft_printf(const char *str, ...)
-{
-	struct output	*out;
-	struct s_info	*info;
-	int				i;
-
-	out = out_initalize();
-	i = 0;
-	while(str[i])
-	{
-		if (str[i] == '%')
-		{
-			if (str[i + 1] == '%')
-			{
-				i++;
-				//add % to out.output;
-
-			}
-			else
-			{
-				while (!chk_for_char(TYPE, str[i]))
-				{
-					//turn flags on & store percision/width
-					*info = flag_flip();
-					get_percis_width();
-
-				}
-				//call actions based on flags
-			}
-
-		}
-		else
-		{
-			//add to buffer
-		}
-		i++;
-	}
-	return (chrcnt); //off by one right now (starts at 0);
+	// may need to return i instead of t_info * to keep place in format str
 }

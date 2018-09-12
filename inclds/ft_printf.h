@@ -6,7 +6,7 @@
 /*   By: edehmlow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 15:40:46 by edehmlow          #+#    #+#             */
-/*   Updated: 2018/09/11 21:29:32 by edehmlow         ###   ########.fr       */
+/*   Updated: 2018/09/11 21:46:22 by edehmlow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <locale.h> /* for setlocale */
 # include <stdlib.h> /* for malloc, free, exit */
 # include <stdarg.h> /* for stdarg */
-# include "libft/inclds/libft.h"
+# include "../libft/inclds/libft.h"
 # define TYPE "sSpdDioOuUxXcC"
 
 int					ft_printf(const char *str, ...);

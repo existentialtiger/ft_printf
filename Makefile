@@ -6,7 +6,7 @@
 #    By: edehmlow <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/18 16:46:18 by edehmlow          #+#    #+#              #
-#    Updated: 2018/08/03 21:35:51 by edehmlow         ###   ########.fr        #
+#    Updated: 2018/09/11 21:45:42 by edehmlow         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,11 @@ FLAGS = -Wall -Wextra -Werror -c
 LIBDIR = libft/
 LIB = $(LIBDIR)libft.a
 
-SRC = 
+SRC = ft_printf.c output_handling.c
+
+DIR_SRC = srcs/
+
+SRCS = $(addprefix $(DIR_SRCS), $(SRC))
 
 .PHONY: all clean fclean re
 
