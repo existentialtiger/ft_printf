@@ -6,7 +6,7 @@
 /*   By: edehmlow <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/08 15:40:46 by edehmlow          #+#    #+#             */
-/*   Updated: 2018/09/11 21:46:22 by edehmlow         ###   ########.fr       */
+/*   Updated: 2018/10/30 13:41:30 by edehmlow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,6 @@ typedef struct		s_output
 {
 	char			*output;
 	int				maxlen;
-	int				chrcnt;
+	int				chrcnt; //isnt this i??
 }					t_output;
 
